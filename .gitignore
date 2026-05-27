@@ -1,0 +1,22 @@
+# Local working files
+CLAUDE.md
+
+# Go binaries / test artifacts
+/build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.*
+
+# Go workspace (per-machine, not for the repo)
+go.work
+go.work.sum
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

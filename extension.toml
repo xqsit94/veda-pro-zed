@@ -1,0 +1,7 @@
+id = "veda-pro-theme"
+name = "Veda Pro"
+version = "0.1.0"
+schema_version = 1
+authors = ["Manikandan <manikandan@xqsit.dev>"]
+description = "A vivid One Dark Pro-inspired Zed theme on a deep violet-indigo background."
+repository = "https://github.com/xqsit94/veda-pro-zed"

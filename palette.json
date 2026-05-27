@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "name": "Veda Pro",
+    "author": "Manikandan",
+    "appearance": "dark"
+  },
+  "background": {
+    "editor": "#15131f",
+    "panel": "#0d0b17",
+    "elevated": "#1d1b27"
+  },
+  "foreground": {
+    "editor": "#ededfe",
+    "muted": "#9a9ab0",
+    "placeholder": "#5e5e76"
+  },
+  "accent": "#57B9FF",
+  "cursor": "#c9c9d8",
+  "selection": "#202036",
+  "border": {
+    "default": "#3e3e4b",
+    "variant": "#2a2a36",
+    "selected": "#293b5b"
+  },
+  "search": {
+    "match": "#57B9FF66",
+    "active_match": "#F8DC7E66"
+  },
+  "diagnostic": {
+    "error": "#FF5C6C",
+    "warning": "#F8DC7E",
+    "info": "#57B9FF",
+    "hint": "#9a9ab0"
+  },
+  "terminal": {
+    "background": "#0f0f1a",
+    "foreground": "#ededfe",
+    "bright": "#f8f8ff",
+    "ansi": {
+      "black":          "#0a0a13",
+      "red":            "#ff0063",
+      "green":          "#00f992",
+      "yellow":         "#ffe900",
+      "blue":           "#00a4ff",
+      "magenta":        "#ff57fd",
+      "cyan":           "#00ffed",
+      "white":          "#ededff",
+      "bright_black":   "#3e3e4b",
+      "bright_red":     "#ff948b",
+      "bright_green":   "#00fcb9",
+      "bright_yellow":  "#ffff68",
+      "bright_blue":    "#3ea0ff",
+      "bright_magenta": "#ff93ff",
+      "bright_cyan":    "#38ffff",
+      "bright_white":   "#f8f8ff"
+    }
+  },
+  "git": {
+    "added":    "#7EE787",
+    "modified": "#F8DC7E",
+    "removed":  "#FF5C6C"
+  },
+  "syntax": {
+    "attribute":               { "color": "#FFB454" },
+    "boolean":                 { "color": "#FFB454" },
+    "comment":                 { "color": "#5C6370", "italic": true },
+    "comment.doc":             { "color": "#5C6370", "italic": true },
+    "constant":                { "color": "#FFB454" },
+    "constructor":             { "color": "#F8DC7E" },
+    "diff.minus":              { "color": "#FF5C6C" },
+    "diff.plus":               { "color": "#7EE787" },
+    "embedded":                { "color": "#ededfe" },
+    "emphasis":                { "color": "#FF5C6C" },
+    "emphasis.strong":         { "color": "#FF5C6C" },
+    "enum":                    { "color": "#F8DC7E" },
+    "function":                { "color": "#00BFFF" },
+    "hint":                    { "color": "#9a9ab0" },
+    "keyword":                 { "color": "#D362FF" },
+    "label":                   { "color": "#FFB454" },
+    "link_text":               { "color": "#57B9FF", "italic": true },
+    "link_uri":                { "color": "#56DCE4" },
+    "namespace":               { "color": "#F8DC7E" },
+    "number":                  { "color": "#FFB454" },
+    "operator":                { "color": "#56DCE4" },
+    "predictive":              { "color": "#5C6370", "italic": true },
+    "preproc":                 { "color": "#D362FF" },
+    "primary":                 { "color": "#ededfe" },
+    "property":                { "color": "#56DCE4" },
+    "punctuation":             { "color": "#ededfe" },
+    "punctuation.bracket":     { "color": "#ededfe" },
+    "punctuation.delimiter":   { "color": "#ededfe" },
+    "punctuation.list_marker": { "color": "#57B9FF" },
+    "punctuation.markup":      { "color": "#ededfe" },
+    "punctuation.special":     { "color": "#56DCE4" },
+    "selector":                { "color": "#57B9FF" },
+    "selector.pseudo":         { "color": "#57B9FF" },
+    "string":                  { "color": "#7EE787" },
+    "string.escape":           { "color": "#56DCE4" },
+    "string.regex":            { "color": "#D362FF" },
+    "string.special":          { "color": "#D362FF" },
+    "string.special.symbol":   { "color": "#FFB454" },
+    "tag":                     { "color": "#FF5C6C" },
+    "text.literal":            { "color": "#7EE787" },
+    "title":                   { "color": "#57B9FF" },
+    "type":                    { "color": "#F8DC7E" },
+    "variable":                { "color": "#ededfe" },
+    "variable.special":        { "color": "#D362FF", "italic": true },
+    "variant":                 { "color": "#F8DC7E" }
+  }
+}
