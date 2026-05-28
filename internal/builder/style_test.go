@@ -78,6 +78,20 @@ func TestStyle_Diagnostics(t *testing.T) {
 	})
 }
 
+func TestStyle_DiagnosticPopoverTints(t *testing.T) {
+	style := Build(fullPalette()).Themes[0].Style
+	assertStyleEqual(t, style, map[string]string{
+		"error.background":   "#FF5C6C1a",
+		"error.border":       "#FF5C6C66",
+		"warning.background": "#F8DC7E1a",
+		"warning.border":     "#F8DC7E66",
+		"info.background":    "#57B9FF1a",
+		"info.border":        "#57B9FF66",
+		"hint.background":    "#9a9ab01a",
+		"hint.border":        "#9a9ab066",
+	})
+}
+
 func TestStyle_SelectedElementsUseSelection(t *testing.T) {
 	style := Build(fullPalette()).Themes[0].Style
 	want := "#202036ff"
