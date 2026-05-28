@@ -15,7 +15,11 @@
         "border.transparent": "#00000000",
         "border.variant": "#2a2a36ff",
         "created": "#7EE787ff",
+        "created.background": "#7EE7871a",
+        "created.border": "#7EE78766",
         "deleted": "#FF5C6Cff",
+        "deleted.background": "#FF5C6C1a",
+        "deleted.border": "#FF5C6C66",
         "editor.active_line.background": "#1d1b27ff",
         "editor.active_line_number": "#ededfeff",
         "editor.background": "#15131fff",
@@ -30,17 +34,26 @@
         "element.selected": "#202036ff",
         "elevated_surface.background": "#0d0b17ff",
         "error": "#FF5C6Cff",
+        "error.background": "#FF5C6C1a",
+        "error.border": "#FF5C6C66",
         "ghost_element.active": "#202036ff",
         "ghost_element.hover": "#1d1b27ff",
         "ghost_element.selected": "#202036ff",
         "hint": "#9a9ab0ff",
+        "hint.background": "#9a9ab01a",
+        "hint.border": "#9a9ab066",
         "icon": "#ededfeff",
         "icon.accent": "#57B9FFff",
         "icon.disabled": "#5e5e76ff",
         "icon.muted": "#9a9ab0ff",
         "icon.placeholder": "#9a9ab0ff",
         "info": "#57B9FFff",
+        "info.background": "#57B9FF1a",
+        "info.border": "#57B9FF66",
         "link_text.hover": "#57B9FFff",
+        "modified": "#F8DC7Eff",
+        "modified.background": "#F8DC7E1a",
+        "modified.border": "#F8DC7E66",
         "panel.background": "#0d0b17ff",
         "players": [
           {
@@ -314,7 +327,9 @@
         "version_control.added": "#7EE787ff",
         "version_control.deleted": "#FF5C6Cff",
         "version_control.modified": "#F8DC7Eff",
-        "warning": "#F8DC7Eff"
+        "warning": "#F8DC7Eff",
+        "warning.background": "#F8DC7E1a",
+        "warning.border": "#F8DC7E66"
       }
     }
   ]

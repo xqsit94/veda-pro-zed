@@ -195,10 +195,19 @@ func applySearch(style map[string]any, p Palette) {
 }
 
 func applyDiagnostics(style map[string]any, p Palette) {
-	setIf(style, "error", normalizeHex(p.Diagnostic.Error))
-	setIf(style, "warning", normalizeHex(p.Diagnostic.Warning))
-	setIf(style, "info", normalizeHex(p.Diagnostic.Info))
-	setIf(style, "hint", normalizeHex(p.Diagnostic.Hint))
+	for _, d := range []struct {
+		key   string
+		color string
+	}{
+		{"error", p.Diagnostic.Error},
+		{"warning", p.Diagnostic.Warning},
+		{"info", p.Diagnostic.Info},
+		{"hint", p.Diagnostic.Hint},
+	} {
+		setIf(style, d.key, normalizeHex(d.color))
+		setIf(style, d.key+".background", withAlpha(d.color, "1a"))
+		setIf(style, d.key+".border", withAlpha(d.color, "66"))
+	}
 }
 
 func applyPlayers(style map[string]any, p Palette) {
@@ -240,15 +249,21 @@ func applyTerminal(style map[string]any, p Palette) {
 }
 
 func applyGit(style map[string]any, p Palette) {
-	added := normalizeHex(p.Git.Added)
-	modified := normalizeHex(p.Git.Modified)
-	removed := normalizeHex(p.Git.Removed)
-
-	setIf(style, "created", added)
-	setIf(style, "deleted", removed)
-	setIf(style, "version_control.added", added)
-	setIf(style, "version_control.modified", modified)
-	setIf(style, "version_control.deleted", removed)
+	for _, d := range []struct {
+		key   string
+		color string
+	}{
+		{"created", p.Git.Added},
+		{"modified", p.Git.Modified},
+		{"deleted", p.Git.Removed},
+	} {
+		setIf(style, d.key, normalizeHex(d.color))
+		setIf(style, d.key+".background", withAlpha(d.color, "1a"))
+		setIf(style, d.key+".border", withAlpha(d.color, "66"))
+	}
+	setIf(style, "version_control.added", normalizeHex(p.Git.Added))
+	setIf(style, "version_control.modified", normalizeHex(p.Git.Modified))
+	setIf(style, "version_control.deleted", normalizeHex(p.Git.Removed))
 }
 
 func applySyntax(style map[string]any, p Palette) {
@@ -275,6 +290,17 @@ func normalizeHex(hex string) string {
 	hex = strings.TrimSpace(hex)
 	if len(hex) == 7 {
 		return hex + "ff"
+	}
+	return hex
+}
+
+func withAlpha(hex, alpha string) string {
+	hex = strings.TrimSpace(hex)
+	if len(hex) == 7 {
+		return hex + alpha
+	}
+	if len(hex) == 9 {
+		return hex[:7] + alpha
 	}
 	return hex
 }
