@@ -249,15 +249,21 @@ func applyTerminal(style map[string]any, p Palette) {
 }
 
 func applyGit(style map[string]any, p Palette) {
-	added := normalizeHex(p.Git.Added)
-	modified := normalizeHex(p.Git.Modified)
-	removed := normalizeHex(p.Git.Removed)
-
-	setIf(style, "created", added)
-	setIf(style, "deleted", removed)
-	setIf(style, "version_control.added", added)
-	setIf(style, "version_control.modified", modified)
-	setIf(style, "version_control.deleted", removed)
+	for _, d := range []struct {
+		key   string
+		color string
+	}{
+		{"created", p.Git.Added},
+		{"modified", p.Git.Modified},
+		{"deleted", p.Git.Removed},
+	} {
+		setIf(style, d.key, normalizeHex(d.color))
+		setIf(style, d.key+".background", withAlpha(d.color, "1a"))
+		setIf(style, d.key+".border", withAlpha(d.color, "66"))
+	}
+	setIf(style, "version_control.added", normalizeHex(p.Git.Added))
+	setIf(style, "version_control.modified", normalizeHex(p.Git.Modified))
+	setIf(style, "version_control.deleted", normalizeHex(p.Git.Removed))
 }
 
 func applySyntax(style map[string]any, p Palette) {
