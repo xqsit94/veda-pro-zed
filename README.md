@@ -29,9 +29,9 @@ ANSI palette so the integrated terminal matches the editor.
 
 ### From the Zed extension registry
 
-Once published, open the command palette → `zed: extensions`, search
-**Veda Pro**, and click Install. Then switch to it via `zed: open theme
-selector` → **Veda Pro**.
+Open the command palette → `zed: extensions`, search **Veda Pro**, and
+click Install. Then switch to it via `zed: open theme selector` →
+**Veda Pro**.
 
 ### Local / development install
 
